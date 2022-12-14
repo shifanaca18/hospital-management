@@ -1,0 +1,15 @@
+{% extends 'theme.html' %}
+{% block title %}
+Departments
+{% endblock  %}
+{% block content %}
+    <h1 class="text-center">Our Departments</h1>
+    <hr>
+    {% for d in departments %}
+    <div class="mx-auto w-50 bg-success text-center
+     text-white p-3 my-3 border border-danger rounded">
+        <h1>{{d.name}}</h1>
+        <p>{{d.desc}}</p>
+    </div>
+    {% endfor %}
+{%endblock%}

@@ -1,0 +1,21 @@
+{% extends 'theme.html' %}
+{% block title %}
+   Our Doctors
+{% endblock  %}
+
+{% block content %}
+<h1>Our Doctors</h1>
+<hr>
+<div class="container my-5 text-center">
+    {% for d in doctors %}
+    <div class="card text-center mx-3 my-3 bg-light" style="width: 18rem; display:inline-block;">
+        <img src={{d.image}} class="card-img-top" style="height:200px;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. {{d.name}}</h5>
+          <p class="card-text">{{d.spec}}</p>
+          <p class="card-text">{{d.dep}} Department</p>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock  %}
